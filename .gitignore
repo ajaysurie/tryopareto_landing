@@ -11,3 +11,11 @@ tristarr_summary.md
 
 # Images that aren't used in the site
 *.png
+.vercel
+
+# Environment variables
+.env
+.env.local
+
+# Dependencies
+node_modules/

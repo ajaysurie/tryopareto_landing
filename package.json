@@ -1,0 +1,9 @@
+{
+  "name": "opareto-landing",
+  "version": "1.0.0",
+  "description": "Opareto landing page with early access signup",
+  "private": true,
+  "dependencies": {
+    "@sendgrid/mail": "^8.1.4"
+  }
+}

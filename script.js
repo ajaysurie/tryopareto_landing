@@ -414,4 +414,102 @@ document.addEventListener('DOMContentLoaded', function() {
     console.log('%cBuilt for trade contractors who want to close more jobs faster.', 'font-size: 14px; color: #6b7280;');
     console.log('%cEnhanced with conversion optimization and accessibility features', 'font-size: 12px; color: #fbbf24;');
 
+    // ===================================
+    // SIGNUP MODAL FUNCTIONALITY
+    // ===================================
+
+    const modal = document.getElementById('signupModal');
+    const modalOverlay = modal.querySelector('.modal-overlay');
+    const modalClose = modal.querySelector('.modal-close');
+    const signupForm = document.getElementById('signupForm');
+    const formMessage = document.getElementById('formMessage');
+
+    // Open modal when CTA buttons are clicked
+    const ctaLinks = document.querySelectorAll('a[href="#cta"]');
+
+    ctaLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden'; // Prevent scrolling
+        });
+    });
+
+    // Close modal function
+    function closeModal() {
+        modal.classList.remove('active');
+        document.body.style.overflow = ''; // Restore scrolling
+        formMessage.className = 'form-message'; // Reset message
+        formMessage.textContent = '';
+    }
+
+    // Close modal on X button click
+    modalClose.addEventListener('click', closeModal);
+
+    // Close modal on overlay click
+    modalOverlay.addEventListener('click', closeModal);
+
+    // Close modal on ESC key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && modal.classList.contains('active')) {
+            closeModal();
+        }
+    });
+
+    // Form submission handling
+    signupForm.addEventListener('submit', async function(e) {
+        e.preventDefault();
+
+        const submitBtn = signupForm.querySelector('.form-submit-btn');
+        const originalText = submitBtn.textContent;
+
+        // Disable button and show loading state
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Submitting...';
+
+        // Get form data
+        const formData = {
+            fullName: document.getElementById('fullName').value,
+            email: document.getElementById('email').value,
+            company: document.getElementById('company').value,
+            tradeType: document.getElementById('tradeType').value,
+            phone: document.getElementById('phone').value
+        };
+
+        try {
+            // Send to API
+            const response = await fetch('/api/signup', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(formData)
+            });
+
+            const result = await response.json();
+
+            if (response.ok) {
+                // Success
+                formMessage.className = 'form-message success';
+                formMessage.textContent = 'Thanks! We\'ll be in touch soon.';
+                signupForm.reset();
+
+                // Close modal after 2 seconds
+                setTimeout(closeModal, 2000);
+            } else {
+                // Error
+                formMessage.className = 'form-message error';
+                formMessage.textContent = result.error || 'Something went wrong. Please try again.';
+            }
+        } catch (error) {
+            // Network error
+            formMessage.className = 'form-message error';
+            formMessage.textContent = 'Network error. Please check your connection and try again.';
+        } finally {
+            // Re-enable button
+            submitBtn.disabled = false;
+            submitBtn.textContent = originalText;
+        }
+    });
+
 });
