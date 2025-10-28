@@ -41,31 +41,285 @@
         </div>
     </section>
 
-    <!-- Section Divider -->
-    <div class="section-divider">
-        <div class="divider-line"></div>
-    </div>
-
-    <!-- How It Works Section -->
-    <section class="how-it-works">
+    <!-- Product Demo Section -->
+    <section class="product-demo">
         <div class="container">
-            <h2 class="section-heading">How it works</h2>
-            <p class="section-subheading">You'll go from walkthrough to delivered quote in minutes</p>
-            <div class="steps-grid">
-                <div class="step-card">
-                    <div class="step-number">01</div>
-                    <h3 class="step-title">Talk through the job</h3>
-                    <p class="step-description">Walk the property and speak naturally into your phone. Describe what you see, snap photos, note measurements. Your voice captures everything—no typing, no forms.</p>
+            <div class="demo-cards">
+                <!-- Card 1: Transcript -->
+                <div class="demo-card-wrapper">
+                    <div class="demo-title-wrapper">
+                        <span class="demo-number">1</span>
+                        <h3 class="demo-section-title">Talk through the job</h3>
+                    </div>
+                    <div class="demo-phone">
+                        <div class="demo-phone-notch"></div>
+                        <div class="demo-card">
+                        <div class="demo-card-header">
+                            <div class="demo-audio-player">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M8 5v14l11-7z"/>
+                                </svg>
+                                <span class="audio-time">0:00 / 1:51</span>
+                            </div>
+                        </div>
+                        <div class="demo-card-content">
+                            <div class="transcript-entry">
+                                <span class="transcript-time">0:00</span>
+                                <p class="transcript-text">"All right, here's what we've got at 428 Maple Street for the Johnsons outside of the condenser unit. Their AC is a three-ton carrier, looks like it's about 12 years old. The compressor is making a grinding noise, bearings are shot, the condenser coil is pretty clogged up with that cottonwood fuzz and dirt, refrigerant's low too, probably has a slow leak somewhere in the line set. We need to replace the compressor and fan motor here. Clean that condenser line thoroughly, system's going to need it."</p>
+                            </div>
+                            <div class="transcript-entry">
+                                <span class="transcript-time">0:30</span>
+                                <p class="transcript-text">"22 to recharge. In the basement mechanical room, the air handler is down here. Evaporator coil is filthy, hasn't been serviced in years by the looks of it. The drain line is partially clogged, I can see standing water in the pan, air filter mounted on the side is completely black, probably hasn't been changed in six months. We need to clean that evaporator coil, clear the drain line, and replace the filter, standard 20x25x1 filter. In the main floor hallway, they've got an old mechanical thermostat here."</p>
+                            </div>
+                            <div class="transcript-entry">
+                                <span class="transcript-time">1:00</span>
+                                <p class="transcript-text">"Honeywell dial ones. Customer said it's acting weird, not holding temperature. This should get upgraded to a programmable unit. It's not critical, but I'd recommend it. The upstairs bedroom's customer mentioned the upstairs isn't cooling at all. Makes sense with the low refrigerant and dirty coils. Once we fix the system, airflow should be fine up there. I checked the supply vents in both bedrooms and the master. They're all open and unobstructed. We're looking at about six hours for the compressor and fan motor."</p>
+                            </div>
+                            <div class="transcript-entry">
+                                <span class="transcript-time">1:30</span>
+                                <p class="transcript-text">"hour for the attic access to get that evaporator coil. It's tight up there. Total seven hours of labor. System should be good for another three to five years after this repair, but at 12 years old they might want to start thinking about a replacement soon. I'll note that in the estimate. Customers seem price sensitive but they need the AC working. It's going to hit 95 degrees this week. I told them we could get this done Thursday. They approved today. That's it."</p>
+                            </div>
+                        </div>
+                        <div class="demo-card-fade"></div>
+                        </div>
+                    </div>
+                    <p class="demo-subtitle">Raw transcript</p>
                 </div>
-                <div class="step-card">
-                    <div class="step-number">02</div>
-                    <h3 class="step-title">AI transcribes and organizes</h3>
-                    <p class="step-description">Your voice notes become a professional estimate. AI identifies line items, pulls pricing from your book, separates materials and labor. Happens while you walk to your truck.</p>
+
+                <!-- Card 2: Summary -->
+                <div class="demo-card-wrapper">
+                    <div class="demo-title-wrapper">
+                        <span class="demo-number">2</span>
+                        <h3 class="demo-section-title">AI organizes your notes</h3>
+                    </div>
+                    <div class="demo-phone">
+                        <div class="demo-phone-notch"></div>
+                        <div class="demo-card demo-card-highlight">
+                        <div class="demo-card-content">
+                            <div class="summary-header">
+                                <h4 class="summary-title">Job Summary - Johnson Residence</h4>
+                                <div class="summary-meta">
+                                    <div><strong>Property:</strong> 428 Maple Street</div>
+                                    <div><strong>Equipment:</strong> Carrier 3-ton AC unit, 12 years old</div>
+                                    <div><strong>Primary Issue:</strong> Failed compressor, low refrigerant, poor cooling</div>
+                                </div>
+                            </div>
+
+                            <div class="summary-divider"></div>
+
+                            <div class="summary-section">
+                                <h4 class="summary-location">🏠 EXTERIOR - Outdoor Condenser Unit</h4>
+                                <p class="summary-equipment">Carrier 3-ton condenser, 12 years old</p>
+
+                                <div class="summary-subsection">
+                                    <strong>Issues Found:</strong>
+                                    <ul class="summary-list">
+                                        <li>Compressor making grinding noise (bearings failed)</li>
+                                        <li>Condenser coil heavily clogged with cottonwood fuzz and debris</li>
+                                        <li>Low R-22 refrigerant levels (suspected slow leak in line set)</li>
+                                    </ul>
+                                </div>
+
+                                <div class="summary-subsection">
+                                    <strong>Work Required:</strong>
+                                    <ul class="summary-list">
+                                        <li>Replace compressor</li>
+                                        <li>Replace condenser fan motor</li>
+                                        <li>Professional coil cleaning</li>
+                                        <li>Recharge refrigerant (4 lbs R-22)</li>
+                                    </ul>
+                                </div>
+
+                                <div class="summary-labor">Estimated Labor: 6 hours</div>
+                            </div>
+
+                            <div class="summary-divider"></div>
+
+                            <div class="summary-section">
+                                <h4 class="summary-location">🔧 BASEMENT - Mechanical Room / Air Handler</h4>
+                                <p class="summary-equipment">Indoor air handler with evaporator coil</p>
+
+                                <div class="summary-subsection">
+                                    <strong>Issues Found:</strong>
+                                    <ul class="summary-list">
+                                        <li>Evaporator coil extremely dirty (years of neglected maintenance)</li>
+                                        <li>Condensate drain line partially clogged (standing water visible in pan)</li>
+                                        <li>Air filter completely blocked/black (6+ months overdue)</li>
+                                    </ul>
+                                </div>
+
+                                <div class="summary-subsection">
+                                    <strong>Work Required:</strong>
+                                    <ul class="summary-list">
+                                        <li>Professional evaporator coil cleaning</li>
+                                        <li>Clear and flush condensate drain line</li>
+                                        <li>Replace air filter (20x25x1)</li>
+                                    </ul>
+                                </div>
+
+                                <div class="summary-labor">Estimated Labor: 1 hour</div>
+                            </div>
+
+                            <div class="summary-divider"></div>
+
+                            <div class="summary-section">
+                                <h4 class="summary-location">🌡️ MAIN FLOOR - Hallway</h4>
+                                <p class="summary-equipment">Mechanical thermostat (Honeywell round dial)</p>
+
+                                <div class="summary-subsection">
+                                    <strong>Issues Found:</strong>
+                                    <ul class="summary-list">
+                                        <li>Thermostat malfunctioning (not holding set temperature)</li>
+                                        <li>Outdated mechanical controls</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="demo-card-fade"></div>
+                        </div>
+                    </div>
+                    <p class="demo-subtitle">AI enhanced summary</p>
                 </div>
-                <div class="step-card">
-                    <div class="step-number">03</div>
-                    <h3 class="step-title">Review and send</h3>
-                    <p class="step-description">Check the estimate on your phone, make quick tweaks, send to the client. Most contractors close deals before leaving the driveway.</p>
+
+                <!-- Card 3: Estimate -->
+                <div class="demo-card-wrapper">
+                    <div class="demo-title-wrapper">
+                        <span class="demo-number">3</span>
+                        <h3 class="demo-section-title">Send estimate</h3>
+                    </div>
+                    <div class="demo-phone">
+                        <div class="demo-phone-notch"></div>
+                        <div class="demo-card">
+                        <div class="demo-card-content">
+                            <div class="estimate-header">
+                                <div class="estimate-header-top">
+                                    <div class="estimate-logo">Summit HVAC</div>
+                                    <div class="estimate-date">Oct 28, 2025</div>
+                                </div>
+                                <h4 class="estimate-title">Repair Estimate</h4>
+                                <div class="estimate-client-info">
+                                    <div>Johnson Residence</div>
+                                    <div>428 Maple Street</div>
+                                    <div>Carrier 3-Ton Central AC • 12 years • R-22</div>
+                                </div>
+                            </div>
+
+                            <div class="estimate-divider"></div>
+
+                            <div class="estimate-section">
+                                <h4 class="estimate-location">EXTERIOR - CONDENSER UNIT</h4>
+
+                                <div class="estimate-subsection">
+                                    <strong class="estimate-subsection-title">Labor</strong>
+                                    <div class="estimate-item">
+                                        <div class="estimate-item-details">
+                                            <span class="estimate-item-name">Compressor & fan motor replacement</span>
+                                            <span class="estimate-item-qty">6.0 hrs × $140</span>
+                                        </div>
+                                        <span class="estimate-item-price">$840</span>
+                                    </div>
+                                </div>
+
+                                <div class="estimate-subsection">
+                                    <strong class="estimate-subsection-title">Parts</strong>
+                                    <div class="estimate-item">
+                                        <div class="estimate-item-details">
+                                            <span class="estimate-item-name">Compressor unit (3-ton)</span>
+                                            <span class="estimate-item-qty">1 × $850</span>
+                                        </div>
+                                        <span class="estimate-item-price">$850</span>
+                                    </div>
+                                    <div class="estimate-item">
+                                        <div class="estimate-item-details">
+                                            <span class="estimate-item-name">Condenser fan motor</span>
+                                            <span class="estimate-item-qty">1 × $220</span>
+                                        </div>
+                                        <span class="estimate-item-price">$220</span>
+                                    </div>
+                                    <div class="estimate-item">
+                                        <div class="estimate-item-details">
+                                            <span class="estimate-item-name">R-22 refrigerant</span>
+                                            <span class="estimate-item-qty">4 lbs × $125</span>
+                                        </div>
+                                        <span class="estimate-item-price">$500</span>
+                                    </div>
+                                </div>
+
+                                <div class="estimate-location-subtotal">
+                                    <span>Location Subtotal</span>
+                                    <span>$2,410</span>
+                                </div>
+                            </div>
+
+                            <div class="estimate-divider"></div>
+
+                            <div class="estimate-section">
+                                <h4 class="estimate-location">BASEMENT - AIR HANDLER</h4>
+
+                                <div class="estimate-subsection">
+                                    <strong class="estimate-subsection-title">Labor</strong>
+                                    <div class="estimate-item">
+                                        <div class="estimate-item-details">
+                                            <span class="estimate-item-name">Attic access & evaporator coil service</span>
+                                            <span class="estimate-item-qty">1.0 hrs × $140</span>
+                                        </div>
+                                        <span class="estimate-item-price">$140</span>
+                                    </div>
+                                </div>
+
+                                <div class="estimate-subsection">
+                                    <strong class="estimate-subsection-title">Parts</strong>
+                                    <div class="estimate-item">
+                                        <div class="estimate-item-details">
+                                            <span class="estimate-item-name">Condensate drain flush kit</span>
+                                            <span class="estimate-item-qty">1 × $45</span>
+                                        </div>
+                                        <span class="estimate-item-price">$45</span>
+                                    </div>
+                                    <div class="estimate-item">
+                                        <div class="estimate-item-details">
+                                            <span class="estimate-item-name">HVAC air filter (20x25x1)</span>
+                                            <span class="estimate-item-qty">1 × $25</span>
+                                        </div>
+                                        <span class="estimate-item-price">$25</span>
+                                    </div>
+                                </div>
+
+                                <div class="estimate-location-subtotal">
+                                    <span>Location Subtotal</span>
+                                    <span>$210</span>
+                                </div>
+                            </div>
+
+                            <div class="estimate-divider"></div>
+
+                            <div class="estimate-total-section">
+                                <div class="estimate-total-row">
+                                    <span>Exterior - Condenser Unit</span>
+                                    <span>$2,410</span>
+                                </div>
+                                <div class="estimate-total-row">
+                                    <span>Basement - Air Handler</span>
+                                    <span>$210</span>
+                                </div>
+                                <div class="estimate-total-row subtotal">
+                                    <span>Subtotal (Core Repairs)</span>
+                                    <span>$2,620</span>
+                                </div>
+                                <div class="estimate-total-row">
+                                    <span>Sales Tax (7%)</span>
+                                    <span>$183</span>
+                                </div>
+                                <div class="estimate-total-row final">
+                                    <span>TOTAL ESTIMATE</span>
+                                    <span>$2,803</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="demo-card-fade"></div>
+                        </div>
+                    </div>
+                    <p class="demo-subtitle">Full estimate</p>
                 </div>
             </div>
         </div>
